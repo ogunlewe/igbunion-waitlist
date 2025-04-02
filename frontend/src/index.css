@@ -74,6 +74,70 @@ input[type="email"]:focus {
   border-color: #ffffff; /* White border on focus */
   box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
+.admin-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.welcome-email-section,
+.announcement-section {
+  background: #1a1a1a;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+
+.admin-container h3 {
+  margin-top: 0;
+  color: #ffffff;
+}
+
+.admin-container select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  background: #000000;
+  border: 1px solid #333333;
+  color: #ffffff;
+  border-radius: 6px;
+}
+
+.status-message {
+  margin-top: 15px;
+  padding: 10px;
+  border-radius: 4px;
+  background: #333333;
+  color: #ffffff;
+}
+
+
+.login-container {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #1a1a1a;
+  border-radius: 8px;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  background: #000000;
+  border: 1px solid #333333;
+  color: #ffffff;
+  border-radius: 6px;
+}
+
+.error-message {
+  color: #ff4444;
+  margin-bottom: 10px;
+  padding: 10px;
+  background: rgba(255, 68, 68, 0.1);
+  border-radius: 4px;
+}
+
 
 /* Button */
 button {
