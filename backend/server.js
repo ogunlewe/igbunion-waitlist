@@ -8,7 +8,8 @@ const app = express();
 app.use(cors({
   origin: ['http://localhost:5173', 'igbogbounion-waitlist.vercel.app'],
   methods: ['GET', 'POST'],
-  credentials: true
+  credentials: true,
+  allowedHeaders: ['Content-Type', 'Authorization']
 }));
 app.use(express.json());
 
