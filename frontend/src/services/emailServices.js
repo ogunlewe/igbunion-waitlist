@@ -1,4 +1,4 @@
-const API_URL =  'https://igbogbounion-backend.vercel.app/api';
+const API_URL = 'https://igbogbounion-backend.vercel.app/api';
 
 export const sendWelcomeEmail = async (email) => {
   try {
