@@ -5,7 +5,11 @@ const cors = require('cors');
 require('dotenv').config();
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: ['http://localhost:5173', 'igbogbounion-waitlist.vercel.app'],
+  methods: ['GET', 'POST'],
+  credentials: true
+}));
 app.use(express.json());
 
 const transporter = nodemailer.createTransport({
@@ -59,7 +63,12 @@ app.post('/api/send-announcement', async (req, res) => {
   }
 });
 
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+// Remove or update the app.listen() call as Vercel handles this
+if (process.env.NODE_ENV !== 'production') {
+  app.listen(process.env.PORT || 5000, () => {
+    console.log(`Server running on port ${process.env.PORT || 5000}`);
+  });
+}
+
+// Export the Express API
+module.exports = app;
